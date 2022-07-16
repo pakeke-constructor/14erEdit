@@ -38,12 +38,8 @@ public class NewCylinderIterator extends BlockIterator {
     int heightAbove, heightBelow;
 
     @Override
-    public NewCylinderIterator newIterator(List<String> arg, World world, CommandSender player) {
+    public NewCylinderIterator newIterator(List<String> args, World world, CommandSender player) {
         try {
-            List<String> args = new ArrayList<>();
-            for (Object s : arg) {
-                args.add((String) s);
-            }
             NewCylinderIterator iterator = new NewCylinderIterator();
             iterator.iterWorld = world;
             iterator.xC = Integer.parseInt(args.get(0)); // Center

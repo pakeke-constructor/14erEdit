@@ -36,12 +36,8 @@ public class RotatedEllipseIterator extends BlockIterator {
     int maxDist;
 
     @Override
-    public RotatedEllipseIterator newIterator(List<String> arg, World world, CommandSender player) {
+    public RotatedEllipseIterator newIterator(List<String> args, World world, CommandSender player) {
         try {
-            List<String> args = new ArrayList<>();
-            for (Object s : arg) {
-                args.add((String) s);
-            }
             RotatedEllipseIterator iterator = new RotatedEllipseIterator();
             iterator.iterWorld = world;
             iterator.xC = Integer.parseInt(args.get(0)); // Center

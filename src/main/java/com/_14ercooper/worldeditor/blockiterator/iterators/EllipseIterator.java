@@ -34,12 +34,8 @@ public class EllipseIterator extends BlockIterator {
     double radCorr;
 
     @Override
-    public EllipseIterator newIterator(List<String> arg, World world, CommandSender player) {
+    public EllipseIterator newIterator(List<String> args, World world, CommandSender player) {
         try {
-            List<String> args = new ArrayList<>();
-            for (Object s : arg) {
-                args.add((String) s);
-            }
             EllipseIterator iterator = new EllipseIterator();
             iterator.iterWorld = world;
             iterator.xC = Integer.parseInt(args.get(0));
